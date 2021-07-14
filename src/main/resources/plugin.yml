@@ -1,0 +1,9 @@
+name: TeleportBow
+version: 1.4
+main: vortexcraft.net.TeleportBow
+authors: [JustReddy]
+softdepend:
+  - PlaceholderAPI
+commands:
+  tpbow:
+    description: main command

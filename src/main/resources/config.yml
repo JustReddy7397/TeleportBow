@@ -1,0 +1,32 @@
+#TpBow by JustReddy
+
+
+#What will the bow name be?
+
+bow-name: "&d&lTeleport Bow"
+
+#What will the bow description be?
+
+# This has PlaceholderAPI Support!
+bow-description:
+  - "&b&lShoot your shot and teleport anywhere."
+
+#What will the tp message be?
+
+teleported-message: "&6&lSwoosh!"
+
+
+#Want to give the bow on join?
+
+give-on-join: true
+# 0 - 8
+bow-slot: 8
+
+messages:
+  no-perms: '&d&l[&b&lTpBow&d&l] &cSorry, but u cant do that'
+  spawned: '&d&l[&b&lTpBow&d&l] &dYou spawned the bow'
+  reloaded: '&d&l[&b&lTpBow&d&l] &eReloaded the config.yml'
+
+disabled-worlds:
+  - "world_nether"
+
