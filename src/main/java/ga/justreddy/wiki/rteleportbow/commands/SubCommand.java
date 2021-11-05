@@ -1,4 +1,4 @@
-package vortexcraft.net.commands;
+package ga.justreddy.wiki.rteleportbow.commands;
 
 import org.bukkit.entity.Player;
 

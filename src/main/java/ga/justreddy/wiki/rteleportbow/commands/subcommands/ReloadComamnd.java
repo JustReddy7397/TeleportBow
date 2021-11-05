@@ -1,9 +1,9 @@
-package vortexcraft.net.commands.subcommands;
+package ga.justreddy.wiki.rteleportbow.commands.subcommands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
-import vortexcraft.net.TeleportBow;
-import vortexcraft.net.commands.SubCommand;
+import ga.justreddy.wiki.rteleportbow.TeleportBow;
+import ga.justreddy.wiki.rteleportbow.commands.SubCommand;
 
 public class ReloadComamnd extends SubCommand {
     @Override
@@ -25,6 +25,7 @@ public class ReloadComamnd extends SubCommand {
     public void perform(Player player, String[] args) {
         if(!player.hasPermission("tpbow.reload")){
             player.sendMessage(ChatColor.translateAlternateColorCodes('&', TeleportBow.getInstance().getConfig().getString("messages.no-perms")));
+            return;
         }
         TeleportBow.getInstance().reloadConfig();
         player.sendMessage(ChatColor.translateAlternateColorCodes('&', TeleportBow.getInstance().getConfig().getString("messages.reloaded")));

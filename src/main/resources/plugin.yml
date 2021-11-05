@@ -1,6 +1,6 @@
 name: TeleportBow
-version: 1.4
-main: vortexcraft.net.TeleportBow
+version: 1.6
+main: ga.justreddy.wiki.rteleportbow.TeleportBow
 authors: [JustReddy]
 softdepend:
   - PlaceholderAPI

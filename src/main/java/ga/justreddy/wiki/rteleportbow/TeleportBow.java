@@ -1,7 +1,8 @@
-package vortexcraft.net;
+package ga.justreddy.wiki.rteleportbow;
 
+import ga.justreddy.wiki.rteleportbow.metrics.Metrics;
 import me.clip.placeholderapi.PlaceholderAPI;
-import org.bstats.bukkit.Metrics;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -11,12 +12,11 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
-import sun.misc.Version;
-import vortexcraft.net.commands.CommandManager;
-import vortexcraft.net.events.OnWorldChange;
-import vortexcraft.net.events.SpawnEvent;
-import vortexcraft.net.events.TeleportEvent;
-import vortexcraft.net.tasks.VersionCheckerTask;
+import ga.justreddy.wiki.rteleportbow.commands.CommandManager;
+import ga.justreddy.wiki.rteleportbow.events.OnWorldChange;
+import ga.justreddy.wiki.rteleportbow.events.SpawnEvent;
+import ga.justreddy.wiki.rteleportbow.events.TeleportEvent;
+import ga.justreddy.wiki.rteleportbow.tasks.VersionCheckerTask;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +24,6 @@ import java.util.stream.Collectors;
 
 public final class TeleportBow extends JavaPlugin implements VersionManager {
     private static TeleportBow instance;
-
 
     public static ArrayList<Player> bow = new ArrayList<>();
 

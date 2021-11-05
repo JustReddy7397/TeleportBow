@@ -1,8 +1,7 @@
-package vortexcraft.net.tasks;
+package ga.justreddy.wiki.rteleportbow.tasks;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitRunnable;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,7 +20,6 @@ public class VersionCheckerTask {
     }
 
     public void getVersion(final Consumer<String> consumer){
-        Bukkit.getServer().getScheduler().runTaskAsynchronously(plugin, () -> {
             try(InputStream inputStream = new URL("https://api.spigotmc.org/legacy/update.php?resource=" + id).openStream(); Scanner scanner = new Scanner(inputStream)) {
                 if(scanner.hasNext()){
                     consumer.accept(scanner.next());
@@ -29,7 +27,5 @@ public class VersionCheckerTask {
             }catch (IOException ex){
                 this.plugin.getLogger().warning("[TeleprotBow] Cannot look for updates: " + ex.getMessage());
             }
-        });
     }
-
 }

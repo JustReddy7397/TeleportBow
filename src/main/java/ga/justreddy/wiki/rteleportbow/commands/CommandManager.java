@@ -1,11 +1,11 @@
-package vortexcraft.net.commands;
+package ga.justreddy.wiki.rteleportbow.commands;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import vortexcraft.net.commands.subcommands.GiveCommand;
-import vortexcraft.net.commands.subcommands.ReloadComamnd;
+import ga.justreddy.wiki.rteleportbow.commands.subcommands.GiveCommand;
+import ga.justreddy.wiki.rteleportbow.commands.subcommands.ReloadComamnd;
 
 
 import java.util.ArrayList;

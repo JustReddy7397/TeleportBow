@@ -1,14 +1,9 @@
-package vortexcraft.net.commands.subcommands;
+package ga.justreddy.wiki.rteleportbow.commands.subcommands;
 
-import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
-import vortexcraft.net.TeleportBow;
-import vortexcraft.net.commands.SubCommand;
-import vortexcraft.net.events.TeleportEvent;
-
-import java.util.ArrayList;
-import java.util.List;
+import ga.justreddy.wiki.rteleportbow.TeleportBow;
+import ga.justreddy.wiki.rteleportbow.commands.SubCommand;
 
 public class GiveCommand extends SubCommand {
     @Override

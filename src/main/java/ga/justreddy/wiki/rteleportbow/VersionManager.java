@@ -1,4 +1,4 @@
-package vortexcraft.net;
+package ga.justreddy.wiki.rteleportbow;
 
 import org.bukkit.Bukkit;
 

@@ -1,12 +1,11 @@
-package vortexcraft.net.events;
+package ga.justreddy.wiki.rteleportbow.events;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerLoginEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
-import vortexcraft.net.TeleportBow;
+import ga.justreddy.wiki.rteleportbow.TeleportBow;
 
 import java.util.List;
 
@@ -27,11 +26,10 @@ public class SpawnEvent implements Listener {
         if (TeleportBow.getInstance().getConfig().getBoolean("give-on-join")) {
             if(worlds.contains(p.getWorld().getName())){
                 TeleportBow.getInstance().removeBow(p);
-                TeleportBow.bow.add(p);
             }else {
                 TeleportBow.getInstance().giveBow(p);
-                TeleportBow.bow.add(p);
             }
+            TeleportBow.bow.add(p);
         }
 
     }

@@ -1,4 +1,4 @@
-package vortexcraft.net.events;
+package ga.justreddy.wiki.rteleportbow.events;
 /*
   Copyright © JustReddy 2021 | All Rights Reserved
   File | OnWorldChange
@@ -10,7 +10,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerChangedWorldEvent;
 import org.bukkit.inventory.ItemStack;
-import vortexcraft.net.TeleportBow;
+import ga.justreddy.wiki.rteleportbow.TeleportBow;
 
 import java.util.List;
 
@@ -22,7 +22,6 @@ public class OnWorldChange implements Listener {
         List<String> worlds = TeleportBow.getInstance().getConfig().getStringList("disabled-worlds");
         if(worlds.contains(p.getWorld().getName())){
             if(TeleportBow.bow.contains(p)){
-                ItemStack air = new ItemStack(Material.AIR);
                 TeleportBow.getInstance().removeBow(p);
             }
         }else{
