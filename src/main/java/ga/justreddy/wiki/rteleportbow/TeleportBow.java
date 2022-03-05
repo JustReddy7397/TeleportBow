@@ -68,8 +68,13 @@ public final class TeleportBow extends JavaPlugin implements VersionManager {
         ItemStack teleport_bow = new ItemStack(Material.BOW);
         ItemMeta meta = teleport_bow.getItemMeta();
         meta.setDisplayName(ChatColor.translateAlternateColorCodes('&', this.getConfig().getString("bow-name")));
-        List<String> lore = getConfig().getStringList("bow-description").stream().map(a -> PlaceholderAPI.setPlaceholders(player, a)).collect(Collectors.toList());
-        meta.setLore(Utils.cList(lore));
+        List<String> lore = getConfig().getStringList("bow-description");
+        final List<String> collection = new ArrayList<>();
+        for(String line : lore){
+            if(Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) line = PlaceholderAPI.setPlaceholders(player, line);
+            collection.add(Utils.c(line));
+        }
+        meta.setLore(Utils.cList(collection));
         if (mc18) {
             meta.spigot().setUnbreakable(true);
         } else {
@@ -92,7 +97,7 @@ public final class TeleportBow extends JavaPlugin implements VersionManager {
         ItemStack teleport_bow = new ItemStack(Material.BOW);
         ItemMeta meta = teleport_bow.getItemMeta();
         meta.setDisplayName(ChatColor.translateAlternateColorCodes('&', this.getConfig().getString("bow-name")));
-        List<String> lore = getConfig().getStringList("bow-description").stream().map(a -> PlaceholderAPI.setPlaceholders(p, a)).collect(Collectors.toList());
+        List<String> lore = getConfig().getStringList("bow-description");
         meta.setLore(Utils.cList(lore));
         if (mc18) {
             meta.spigot().setUnbreakable(true);
