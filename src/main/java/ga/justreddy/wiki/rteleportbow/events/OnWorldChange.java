@@ -4,13 +4,11 @@ package ga.justreddy.wiki.rteleportbow.events;
   File | OnWorldChange
 */
 
-import org.bukkit.Material;
+import ga.justreddy.wiki.rteleportbow.TeleportBow;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerChangedWorldEvent;
-import org.bukkit.inventory.ItemStack;
-import ga.justreddy.wiki.rteleportbow.TeleportBow;
 
 import java.util.List;
 

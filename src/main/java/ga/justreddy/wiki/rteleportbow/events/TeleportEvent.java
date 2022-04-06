@@ -28,17 +28,19 @@ public class TeleportEvent implements Listener {
                     return;
                 }
             }
-            if (player.getItemInHand().getType().equals(Material.BOW) && player.getItemInHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("bow-name")))) {
-                Location location = e.getEntity().getLocation();
+            if (player.getItemInHand().getType().equals(Material.BOW) &&
+                    player.getItemInHand().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("bow-name")))) {
+                if(player.hasPermission("tpbow.teleport")) {
+                    Location location = e.getEntity().getLocation();
+                    location.setYaw(player.getLocation().getYaw());
+                    location.setPitch(player.getLocation().getPitch());
+                    player.teleport(location);
+                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', this.plugin.getConfig().getString("teleported-message")));
+                }
                 e.getEntity().remove();
-                location.setYaw(player.getLocation().getYaw());
-                location.setPitch(player.getLocation().getPitch());
-                player.teleport(location);
-                player.sendMessage(ChatColor.translateAlternateColorCodes('&', this.plugin.getConfig().getString("teleported-message")));
-
             }
-            }catch(ClassCastException | NullPointerException ignore){
-            }
+        } catch (ClassCastException | NullPointerException ignore) {
+        }
 
     }
 }
